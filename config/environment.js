@@ -2,8 +2,11 @@
 
 module.exports = function(environment) {
   var ENV = {
-    contentSecurityPolicy: {
-      'connect-src': "'self' http://localhost:3000"
+    contentSecurityPolicy:{
+      'script-src': "'self' 'unsafe-eval' http://*:35729 https://apis.google.com",
+      'font-src': "'self' https://fonts.gstatic.com",
+      'connect-src': "'self' *",
+      'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com",
     },
     modulePrefix: 'chirper-ember',
     environment: environment,
