@@ -1,0 +1,15 @@
+{{outlet}}
+<div>
+  {{#each model as |chirp|}}
+  <div class="chirp-card">
+    <p class="chirp-content">
+      {{{chirp.content}}}
+    </p>
+    <div class="chirp-username">
+      by:
+      {{chirp.user.username}}
+    </div>
+    <button {{action 'deleteChirp' chirp}} >Delete</button>
+  </div>
+  {{/each}}
+</div>

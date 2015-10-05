@@ -2,6 +2,9 @@
 
 module.exports = function(environment) {
   var ENV = {
+    contentSecurityPolicy: {
+      'connect-src': "'self' http://localhost:3000"
+    },
     modulePrefix: 'chirper-ember',
     environment: environment,
     baseURL: '/',

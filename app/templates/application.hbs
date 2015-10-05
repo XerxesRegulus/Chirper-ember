@@ -1,3 +1,9 @@
-<h2 id="title">Welcome to Ember</h2>
-
+<nav>
+  <div class="nav-wrapper">
+    <div class="nav-logo">
+    {{#link-to 'chirps'}}Chirper{{/link-to}}
+    </div>
+  </div>
+</nav>
+<div>{{#link-to 'chirps.new'}}Chirp{{/link-to}}</div>
 {{outlet}}
