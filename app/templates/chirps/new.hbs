@@ -1,14 +1,4 @@
 <h1 class="form-header">
   Make yourself heard today!
 </h1>
-<div class="form-wrapper">
-  <form {{action "createChirp" on="submit"}}>
-    <div>
-      <label>Content:</label>
-      {{textarea rows="5" value=model.content}}
-    </div>
-    <div class="form-group">
-      <button>Submit</button>
-    </div>
-  </form>
-</div>
+{{partial "chirps/form"}}
