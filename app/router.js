@@ -7,9 +7,11 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.resource('chirps', function() {
-    this.route('new')
+    this.route('new');
   });
   this.route('users', {path: 'users/:id'});
+  this.route('protected');
+  this.route('login');
 });
 
 export default Router;

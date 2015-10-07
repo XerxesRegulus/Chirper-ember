@@ -6,4 +6,9 @@
   </div>
 </nav>
 <div>{{#link-to 'chirps.new'}}Chirp{{/link-to}}</div>
+{{#if session.isAuthenticated}}
+  <button {{action 'invalidateSession'}}>Logout</button>
+{{else}}
+  {{#link-to 'login'}}Login{{/link-to}}
+{{/if}}
 {{outlet}}
