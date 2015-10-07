@@ -5,6 +5,6 @@ export default Ember.Route.extend({
     return this.store.findRecord('user', params.id);
   },
   setupController(controller, model) {
-    controller.set('user', model)
+    controller.set('user', model);
   },
 });
