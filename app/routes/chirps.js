@@ -5,7 +5,7 @@ export default Ember.Route.extend({
     return this.csrf.fetchToken();
   },
   model: function(){
-    return this.store.find('chirp');
+    return this.store.findAll('chirp');
   },
   actions: {
     deleteChirp: function(chirp) {
