@@ -1,19 +1,20 @@
-<div class="form-wrapper">
+<div class='form-wrapper'>
   <form>
     <h4>{{errorMessage}}</h4>
     <div>
       <label>Content:</label>
-      {{textarea rows="5" value=model.content}}
+      {{textarea rows='5' value=model.content}}
+      {{input type='hidden' valueBinding="firstName"}}
     </div>
-    <div class="form-group">
-      <button {{action "createChirp"}}>Submit</button>
+    <div class='form-group'>
+      <button {{action 'createChirp'}}>Submit</button>
     </div>
   </form>
 </div>
 <div>
-  <div class="chirp-card">
+  <div class='chirp-card'>
   <h4>Preview:</h4>
-    <p class="chirp-content">
+    <p class='chirp-content'>
       {{{model.content}}}
     </p>
   </div>
