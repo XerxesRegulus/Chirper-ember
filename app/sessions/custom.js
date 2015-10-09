@@ -5,7 +5,7 @@ export default Session.extend({
   currentUser: function() {
     var userId = this.get('secure.userId');
     if (userId && this.get('isAuthenticated')) {
-      console.log(this._store)
+      console.log(userId)
       return this._store.findRecord('user', userId);
     }
   }.property('secure.userId', 'isAuthenticated')
