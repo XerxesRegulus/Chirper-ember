@@ -12,6 +12,10 @@
     "jquery": "^1.11.3",
     "loader.js": "ember-cli/loader.js#3.2.1",
     "qunit": "~1.18.0",
+    "ember-data": "components/ember-data#canary",
     "ember-simple-auth": "0.8.0"
+  },
+  "resolutions": {
+    "ember-data": "canary"
   }
 }

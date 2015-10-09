@@ -26,11 +26,15 @@ module.exports = function(environment) {
   };
 
   ENV['simple-auth'] = {
-    authorizer: 'simple-auth-authorizer:devise'
+    session: 'session:custom',
+    authorizer: 'simple-auth-authorizer:devise',
+    store: 'simple-auth-session-store:local-storage'
   };
+  
   ENV['simple-auth-devise'] = {
   tokenAttributeName: 'token',
-  identificationAttributeName: 'email'
+  identificationAttributeName: 'email',
+  session: 'session:custom'
   };
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
