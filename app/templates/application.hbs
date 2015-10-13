@@ -8,7 +8,7 @@
 <div class="subnav">
   {{#if session.isAuthenticated}}
     <div class="welcome-message">
-      Welcome, <span class="user-name" {{action 'ownProfile'}}>{{session.currentUser.username}}</span>
+      Welcome, <span class="user-name" {{action 'goToCurrentProfile'}}>{{session.currentUser.username}}</span>
     </div>
     <div class="subnav-buttons">
       <button class="logout-button button" {{action 'invalidateSession'}}>Logout</button>

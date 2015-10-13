@@ -7,6 +7,10 @@ export default Ember.Route.extend({
   actions: {
     deleteChirp: function(chirp) {
       chirp.destroyRecord();
+    },
+    chirpUserLink: function(chirp){
+      const userId = chirp.get('user.id');
+      this.transitionTo('users', userId)
     }
   }
 });

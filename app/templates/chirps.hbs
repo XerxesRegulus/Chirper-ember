@@ -7,7 +7,9 @@
     </p>
     <div class="chirp-username">
       by:
-      {{chirp.user.username}}
+      <div class='user-name' {{action 'chirpUserLink' chirp}}>
+        {{chirp.user.username}}
+      </div>
     </div>
     <button {{action 'deleteChirp' chirp}} class="button">Delete</button>
   </div>
