@@ -32,9 +32,9 @@ module.exports = function(environment) {
   };
   
   ENV['simple-auth-devise'] = {
-  tokenAttributeName: 'token',
-  identificationAttributeName: 'email',
-  session: 'session:custom'
+    tokenAttributeName: 'token',
+    identificationAttributeName: 'email',
+    session: 'session:custom'
   };
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;

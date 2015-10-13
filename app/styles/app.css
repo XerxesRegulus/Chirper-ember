@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 @import url(https://fonts.googleapis.com/css?family=Slabo+27px);
-
 * {
   margin: 0;
   text-decoration: none;
@@ -42,7 +41,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background: white;
-  border: 1px solid gray;
+  border: 1px solid grey;
   color: #404040;
 }
 
@@ -103,9 +102,13 @@ nav {
   padding: 14px 0;
   text-indent: 14px;
 }
-
+.user-name
+{
+  cursor: pointer;
+}
 .button {
   padding: 7px 14px;
+  border: 1px solid #404040;
   background: #404040;
   color: white;
   transition: 0.5s all ease-in-out;
@@ -154,7 +157,7 @@ nav {
 }
 
 .form-wrapper {
-  max-width: 540px;
+  max-width: 500px;
   margin: 0 auto;
   padding-top: 35px;
 }

@@ -5,11 +5,17 @@
     </div>
   </div>
 </nav>
-<div>{{#link-to 'chirps.new'}}Chirp{{/link-to}}</div>
-{{#if session.isAuthenticated}}
-  <p>{{session.currentUser.username}}</p>
-  <button {{action 'invalidateSession'}}>Logout</button>
-{{else}}
-  {{#link-to 'login'}}Login{{/link-to}}
-{{/if}}
+<div class="subnav">
+  {{#if session.isAuthenticated}}
+    <div class="welcome-message">
+      Welcome, <span class="user-name" {{action 'ownProfile'}}>{{session.currentUser.username}}</span>
+    </div>
+    <div class="subnav-buttons">
+      <button class="logout-button button" {{action 'invalidateSession'}}>Logout</button>
+      <button class="new-chirp button" {{action 'goToCreateChirp'}}>Chirp!</button>
+    </div>
+    {{else}}
+    {{#link-to 'login'}}Login{{/link-to}}
+  {{/if}}
+</div>
 {{outlet}}
