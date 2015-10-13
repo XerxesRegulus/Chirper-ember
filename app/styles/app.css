@@ -139,7 +139,10 @@ nav {
   font-family: "Lobster", cursive;
   font-size: 16px;
 }
-
+.user-name
+{
+  cursor: pointer;
+}
 .chirp-content,
 .chirp-controls {
   margin: 14px;
