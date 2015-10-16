@@ -15,7 +15,9 @@
       <button class="new-chirp button" {{action 'goToCreateChirp'}}>Chirp!</button>
     </div>
     {{else}}
-    {{#link-to 'login'}}Login{{/link-to}}
+    <button name="button" {{action 'login'}}>Login</button>
+    <button name="button" {{action 'signUp'}}>SignUp</button>
+
   {{/if}}
 </div>
 {{outlet}}

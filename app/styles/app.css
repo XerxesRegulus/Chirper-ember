@@ -46,6 +46,15 @@ input[type="submit"]:hover {
   color: #404040;
 }
 
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
 h1,
 h2,
 h3,
@@ -104,7 +113,8 @@ nav {
   text-indent: 14px;
 }
 
-.button {
+.button,
+button {
   padding: 7px 14px;
   background: #404040;
   color: white;
@@ -115,6 +125,7 @@ nav {
   float: right;
 }
 
+button:hover,
 .button:hover {
   color: #404040;
   background: white;

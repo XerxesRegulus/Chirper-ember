@@ -9,6 +9,7 @@ Router.map(function() {
   this.resource('chirps', function() {
     this.route('new');
   });
+  this.route('registration', {path: 'users/sign_up'});
   this.route('users', {path: 'users/:id'});
   this.route('login');
 });

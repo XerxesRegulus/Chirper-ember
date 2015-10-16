@@ -8,6 +8,12 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
     },
     goToCurrentProfile: function() {
       this.transitionTo('users', this.get('session.currentUser.id'));
+    },
+    login: function() {
+      this.transitionTo('login');
+    },
+    signUp: function(){
+      this.transitionTo('registration');
     }
   }
 });

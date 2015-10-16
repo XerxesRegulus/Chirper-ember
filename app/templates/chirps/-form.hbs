@@ -3,7 +3,7 @@
     <h4>{{errorMessage}}</h4>
     <div>
       <label>Content:</label>
-      {{textarea rows='5' value=model.content}}
+      {{textarea rows='5' value=model.content maxlength='140'}}
     </div>
     <div class='form-group'>
       <button {{action 'createChirp'}}>Submit</button>
