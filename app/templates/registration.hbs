@@ -1,0 +1,25 @@
+<div class='form-wrapper'>
+  <form>
+    <div class='form-group'>
+      <label>Email</label>
+      {{input value=model.email placeholder='Enter Login'}}
+    </div>
+    <div class='form-group'>
+      <label>Username</label>
+      {{input value=model.username placeholder='Enter Username'}}
+    </div>
+    <div class='form-group'>
+      <label>Password</label>
+      {{input value=model.password placeholder='Enter Password' type="password"}}
+    </div>
+    <div class='form-group'>
+      <label>Password Confirmation</label>
+      {{input value=model.password_confirmation placeholder='Re-enter password' type="password"}}
+    </div>
+    <div class='form-group'>
+      <button {{action 'createUser'}}>Submit</button>
+    </div>
+  </form>
+</div>
+<div>
+</div>
