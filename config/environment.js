@@ -24,24 +24,25 @@ module.exports = function(environment) {
       // when it is created
     }
   };
-
-  ENV['simple-auth'] = {
-    session: 'session:custom',
-    authorizer: 'simple-auth-authorizer:devise',
-    store: 'simple-auth-session-store:local-storage'
-  };
-  
-  ENV['simple-auth-devise'] = {
-  tokenAttributeName: 'token',
-  identificationAttributeName: 'email',
-  session: 'session:custom'
-  };
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.host = 'http://localhost:3000';
+    ENV.namespace = 'api/v1';
+
+    ENV['simple-auth'] = {
+      session: 'session:custom',
+      authorizer: 'simple-auth-authorizer:devise',
+      store: 'simple-auth-session-store:local-storage'
+    };
+    ENV['simple-auth-devise'] = {
+    tokenAttributeName: 'token',
+    identificationAttributeName: 'email',
+    session: 'session:custom'
+    };
   }
 
   if (environment === 'test') {

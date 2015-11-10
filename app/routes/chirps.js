@@ -10,7 +10,7 @@ export default Ember.Route.extend({
     },
     chirpUserLink: function(chirp){
       const userId = chirp.get('user.id');
-      this.transitionTo('users', userId)
+      this.transitionTo('users.show', userId);
     }
   }
 });

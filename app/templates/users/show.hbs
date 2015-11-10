@@ -1,0 +1,22 @@
+<div>
+  {{user.username}}
+  {{user.email}}
+</div>
+<div class="">
+  <button type="submit" name="button" {{action 'goToFollowers' user}}>Followers</button>
+</div>
+<div>
+  {{#each user.chirps as |chirp|}}
+  <div class="chirp-card">
+    <p class="chirp-content">
+      {{{chirp.content}}}
+    </p>
+    <div class="chirp-username">
+      by:
+      {{user.username}}
+    </div>
+  </div>
+  {{/each}}
+</div>
+
+{{outlet}}

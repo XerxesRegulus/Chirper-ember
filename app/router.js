@@ -9,9 +9,14 @@ Router.map(function() {
   this.resource('chirps', function() {
     this.route('new');
   });
-  this.route('registration', {path: 'users/sign_up'});
-  this.route('users', {path: 'users/:id'});
   this.route('login');
+  this.route('registration', {path: 'users/sign_up'});
+  this.resource('users', function(){
+    this.route('show', {path: ':user_id'}, function(){
+      this.route('followers', {path: ':user_id/followers'});
+      this.route('followings');
+    });
+  });
 });
 
 export default Router;

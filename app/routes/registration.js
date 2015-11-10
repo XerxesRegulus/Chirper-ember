@@ -8,7 +8,7 @@ export default Ember.Route.extend(LoginControllerMixin, {
     createUser: function() {
       const newUser = this.get('store').createRecord('user', this.currentModel);
       const email = newUser.get('identification');
-      newUser.set('email', email)
+      newUser.set('email', email);
       newUser.save().then((user) => {
         var data = newUser.getProperties('identification', 'password');
         return this.get('session').authenticate('simple-auth-authenticator:devise', data);

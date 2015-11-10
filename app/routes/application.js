@@ -7,7 +7,7 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
       this.transitionTo('chirps.new');
     },
     goToCurrentProfile: function() {
-      this.transitionTo('users', this.get('session.currentUser.id'));
+      this.transitionTo('users.show', this.get('session.currentUser.id'));
     },
     login: function() {
       this.transitionTo('login');
